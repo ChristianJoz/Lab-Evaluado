@@ -6,6 +6,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
 public class BaseDeDato extends SQLiteOpenHelper {
     public BaseDeDato(@Nullable Context context) {
         super(context, "Inventario.db", null, 1);
@@ -36,5 +41,15 @@ public class BaseDeDato extends SQLiteOpenHelper {
         db.execSQL("drop table if exists tb_usuario");
         onCreate(db);
     }
+    private String getDateTime() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat(
+                "yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+        Date date = new Date();
+        return dateFormat.format(date);
+    }
 
+
+    //getting the current time for joining date
+    Calendar cal = Calendar.getInstance();
+    SimpleDateFormat sdf = new SimpleDateFormat();
 }
