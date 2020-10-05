@@ -2,9 +2,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.laboratorio.MainActivity">
+
+
+    <!-- Karla Encargada  -->
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/Acercade"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Integrantes"
+        app:showAsAction="never" />
+
+
+
+    <!-- Walmer En proceso  -->
+    <item
+        android:id="@+id/Recicle"
+        android:orderInCategory="100"
+        android:title="list"
+        app:showAsAction="never" />
+
+
+
+    <!-- privado  -->
+    <item
+        android:id="@+id/registro"
+        android:orderInCategory="100"
+        android:title="Ingresar Registro"
         app:showAsAction="never" />
 </menu>
